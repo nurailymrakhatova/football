@@ -27,4 +27,4 @@ Open `index.html` in a browser or run it with Live Server in VS Code.
 
 ## Links
 - GitHub repository: ajymzanamantaj-gif/football-team
-- Published website: https://ajymzanamantaj-gif.github.io/football-team/index.html
+- Published website: https://nurailymrakhatova.github.io/football/
