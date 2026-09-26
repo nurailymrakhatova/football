@@ -1,0 +1,145 @@
+/* Basic styles used on all four pages */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #17213d; line-height: 1.5; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+.container { width: 90%; max-width: 1100px; margin: auto; }
+.section { padding-top: 65px; padding-bottom: 65px; }
+h1, h2, h3 { line-height: 1.2; }
+h2 { font-size: 34px; margin: 0 0 18px; }
+h3 { margin: 0 0 10px; }
+p { margin-top: 0; }
+.small-title { font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+.purple-text { color: #5b4595; }
+.intro-text, .source-note { color: #606a80; }
+
+/* Flexbox: logo and navigation in one row */
+.site-header { background: white; border-bottom: 1px solid #d9dce6; }
+.header-content { min-height: 75px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.logo { text-decoration: none; font-size: 22px; font-weight: bold; color: #514098; white-space: nowrap; }
+.logo span { font-size: 16px; color: #17213d; margin-left: 5px; }
+.main-nav { display: flex; flex-wrap: wrap; gap: 7px; }
+.main-nav a { text-decoration: none; padding: 9px 12px; font-size: 14px; border-bottom: 3px solid transparent; }
+.main-nav a:hover, .main-nav .active { color: #514098; border-color: #e7c773; }
+a:focus-visible { outline: 3px solid #514098; outline-offset: 3px; }
+.button { display: inline-block; padding: 12px 18px; text-decoration: none; font-size: 13px; font-weight: bold; margin-top: 12px; }
+.button:hover { opacity: 0.8; }
+.gold-button { background: #f1ce7d; color: #18203b; }
+.dark-button { background: #17213d; color: white; }
+.light-button { background: white; color: #17213d; }
+
+/* Home page */
+.home-hero { position: relative; height: 490px; color: white; background: #17213d; }
+.hero-photo, .hero-photo img { width: 100%; height: 100%; }
+.hero-photo { position: absolute; top: 0; left: 0; }
+.hero-photo img { object-fit: cover; opacity: 0.45; }
+.hero-text { position: relative; padding-top: 110px; }
+.hero-text h1 { font-size: 72px; margin: 0 0 16px; }
+.hero-text > p { max-width: 500px; }
+/* Grid: three links are aligned as columns */
+.topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.topic-card { min-height: 210px; padding: 25px; }
+.topic-card h3 { font-size: 26px; }
+.topic-card p { min-height: 62px; }
+.topic-card a { font-weight: bold; }
+.topic-card a:hover { color: #bd8b1e; }
+.purple-card { background: #e9e2f6; }
+.blue-card { background: #e0e8fa; }
+.yellow-card { background: #f8eac7; }
+.dark-section { background: #17213d; color: white; }
+.fact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-top: 65px; padding-bottom: 65px; }
+.quick-facts { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+.quick-facts li { border-left: 2px solid #f1ce7d; padding-left: 12px; }
+.quick-facts strong { display: block; font-size: 23px; }
+.quick-facts span { font-size: 13px; }
+.home-player { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+figure { margin: 0; }
+.home-player figure { background: #eee9f7; text-align: center; }
+.home-player img { width: 100%; height: 320px; object-fit: cover; }
+figcaption { font-size: 12px; color: #5f6880; padding: 8px; }
+.cheer { text-align: center; border-top: 1px solid #d9dce6; padding: 35px 0 60px; }
+.cheer p { color: #514098; font-weight: bold; letter-spacing: 3px; }
+.cheer h2 { color: #253870; font-size: 48px; margin: 0; }
+
+/* Page headings */
+.page-heading { padding: 55px 0; }
+.page-heading h1 { font-size: 56px; margin: 0 0 10px; }
+.purple-heading { background: #574596; color: white; }
+.blue-heading { background: #283b7c; color: white; }
+.gold-heading { background: #f1d694; color: #17213d; }
+
+/* Team page: six photo cards use Grid */
+.player-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.player-card { border: 1px solid #d9dce6; }
+.player-card img { width: 100%; height: 260px; object-fit: contain; background: #eee9f7; }
+.player-card div { padding: 14px; }
+.player-card p { margin: 0; color: #5f6880; }
+.roster-section { background: #f4f4f8; }
+.roster-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.roster-group { padding: 22px; background: white; border: 1px solid #d9dce6; }
+.roster-group ul { margin: 0; padding-left: 20px; }
+.roster-group li { padding: 3px 0; }
+.source-note { font-size: 13px; margin-top: 20px; }
+.coach-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.coach-layout figure { text-align: center; background: #eee9f7; }
+.coach-layout img { height: 340px; margin: auto; }
+
+/* History page */
+.story-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.story-layout img { width: 100%; height: 300px; object-fit: cover; }
+.timeline-section { background: #f4f4f8; }
+.timeline { margin: 0; padding: 0; list-style: none; }
+.timeline li { display: flex; gap: 30px; border-top: 1px solid #d4d8e2; padding: 18px 0; }
+.timeline strong { width: 100px; flex-shrink: 0; color: #514098; font-size: 24px; }
+.timeline p { margin: 0; }
+.history-photos { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+.history-photos img { width: 100%; height: 190px; object-fit: cover; }
+
+/* Stadium page: six-photo gallery uses Grid */
+.stadium-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; align-items: center; }
+.stadium-intro img { width: 100%; height: 320px; object-fit: cover; }
+.stadium-intro aside { padding: 25px; background: #eee9f7; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.gallery-grid figure { border: 1px solid #d9dce6; }
+.gallery-grid img { width: 100%; height: 180px; object-fit: cover; }
+.visit-box { background: #f9edcf; display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-left: 30px; padding-right: 30px; margin-bottom: 60px; }
+.visit-box div { max-width: 620px; }
+
+/* Footer */
+.site-footer { background: #101936; color: white; }
+.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding: 25px 0; font-size: 13px; }
+.footer-content p { margin: 0; }
+.footer-content a:hover { color: #f1ce7d; }
+
+/* Tablet */
+@media (max-width: 850px) {
+  .header-content { flex-direction: column; align-items: flex-start; padding: 14px 0; }
+  .topic-grid, .player-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .history-photos { grid-template-columns: repeat(2, 1fr); }
+  .history-photos div { grid-column: 1 / 3; }
+  .hero-text h1 { font-size: 60px; }
+}
+/* Phone */
+@media (max-width: 600px) {
+  .container { width: 92%; }
+  .section { padding-top: 45px; padding-bottom: 45px; }
+  h2 { font-size: 27px; }
+  .home-hero { height: 440px; }
+  .hero-text { padding-top: 85px; }
+  .hero-text h1 { font-size: 48px; }
+  .page-heading h1 { font-size: 39px; }
+  .topic-grid, .fact-layout, .home-player, .roster-grid, .coach-layout,
+  .story-layout, .history-photos, .stadium-intro { grid-template-columns: 1fr; }
+  .history-photos div { grid-column: auto; }
+  .player-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .player-card img { height: 180px; }
+  .player-card h3 { font-size: 16px; }
+  .gallery-grid img { height: 120px; }
+  .timeline li { gap: 12px; }
+  .timeline strong { width: 70px; font-size: 20px; }
+  .visit-box { flex-direction: column; align-items: flex-start; }
+  .cheer h2 { font-size: 34px; }
+}
+@media (max-width: 380px) {
+  .player-grid, .gallery-grid { grid-template-columns: 1fr; }
+}

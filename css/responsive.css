@@ -1,0 +1,123 @@
+/* Планшет */
+@media (max-width: 850px) {
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 0;
+  }
+
+  .topic-grid,
+  .player-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .history-photos div {
+    grid-column: 1 / 3;
+  }
+
+  .hero-text h1 {
+    font-size: 60px;
+  }
+}
+
+
+/* Телефон */
+@media (max-width: 600px) {
+
+  .container {
+    width: 92%;
+  }
+
+  .section {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+
+  .home-hero {
+    height: 440px;
+  }
+
+  .hero-text {
+    padding-top: 85px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+
+  .page-heading h1 {
+    font-size: 39px;
+  }
+
+  .topic-grid,
+  .fact-layout,
+  .home-player,
+  .roster-grid,
+  .coach-layout,
+  .story-layout,
+  .history-photos,
+  .stadium-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .history-photos div {
+    grid-column: auto;
+  }
+
+  .player-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .player-card img {
+    height: 180px;
+  }
+
+  .player-card h3 {
+    font-size: 16px;
+  }
+
+  .gallery-grid img {
+    height: 120px;
+  }
+
+  .timeline li {
+    gap: 12px;
+  }
+
+  .timeline strong {
+    width: 70px;
+    font-size: 20px;
+  }
+
+  .visit-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cheer h2 {
+    font-size: 34px;
+  }
+}
+
+
+/* Очень узкий экран */
+@media (max-width: 380px) {
+
+  .player-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
