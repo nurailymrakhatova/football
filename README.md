@@ -26,5 +26,5 @@ Introduce visitors to the club, its players, history and Santiago Bernabéu stad
 Open `index.html` in a browser or run it with Live Server in VS Code.
 
 ## Links
-- GitHub repository: ajymzanamantaj-gif/football-team
+- GitHub repository: https://github.com/nurailymrakhatova/football.git
 - Published website: https://nurailymrakhatova.github.io/football/
