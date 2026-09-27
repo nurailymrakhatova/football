@@ -11,8 +11,8 @@ Introduce visitors to the club, its players, history and Santiago Bernabéu stad
 | Team member | Page | Main work |
 |---|---|---|
 | Amantay Aiymzhan | index.html | Home page |
-| Ayazhan Serikkazy | history.html | Players and coach |
-| Aruzhan Meirkhan | team.html | Club history |
+| Aruzhan Meirkhan | team.html | Players and coach |
+| Ayazhan Serikkazy | history.html | Club history |
 | Nurailym Rakhatova | stadium.html | Stadium and gallery |
 
 ## Technologies
