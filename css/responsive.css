@@ -1,4 +1,4 @@
-/* Планшет */
+
 @media (max-width: 850px) {
 
   .header-content {
@@ -27,7 +27,7 @@
 }
 
 
-/* Телефон */
+
 @media (max-width: 600px) {
 
   .container {
@@ -112,7 +112,7 @@
 }
 
 
-/* Очень узкий экран */
+
 @media (max-width: 380px) {
 
   .player-grid,
