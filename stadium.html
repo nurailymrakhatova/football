@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Stadium | Real Madrid Fan Site</title>
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-
   <header class="site-header">
     <div class="container header-content">
       <a class="logo" href="index.html">
@@ -27,7 +27,6 @@
   </header>
 
   <main>
-
     <section class="page-heading gold-heading">
       <div class="container">
         <p class="small-title">REAL MADRID · HOME</p>
@@ -40,6 +39,8 @@
       <figure>
         <img
           src="images/Bernabeu.webp"
+          width="1200"
+          height="430"
           alt="Santiago Bernabéu stadium in Madrid"
           loading="lazy"
         >
@@ -49,10 +50,12 @@
       <aside>
         <p class="small-title purple-text">THE HOME GROUND</p>
         <h2>A stadium in Madrid</h2>
+
         <p>
           The stadium opened in 1947 under the name Nuevo Chamartín.
           It received the name Santiago Bernabéu in 1955.
         </p>
+
         <p>Real Madrid plays its home games here.</p>
       </aside>
     </section>
@@ -62,11 +65,12 @@
       <h2>Six views of the stadium</h2>
 
       <div class="gallery-grid">
-
         <figure>
           <img
             src="images/Bernabeu.webp"
-            alt="Stadium view"
+            width="1200"
+            height="430"
+            alt="Exterior view of Santiago Bernabéu stadium"
             loading="lazy"
           >
           <figcaption>Stadium view</figcaption>
@@ -75,7 +79,9 @@
         <figure>
           <img
             src="images/exterior estadio iluminado.webp"
-            alt="Outside at night"
+            width="1000"
+            height="426"
+            alt="Illuminated exterior of Santiago Bernabéu at night"
             loading="lazy"
           >
           <figcaption>Outside at night</figcaption>
@@ -84,7 +90,9 @@
         <figure>
           <img
             src="images/pitch.webp"
-            alt="Football pitch"
+            width="1000"
+            height="563"
+            alt="Football pitch inside Santiago Bernabéu"
             loading="lazy"
           >
           <figcaption>Football pitch</figcaption>
@@ -93,7 +101,9 @@
         <figure>
           <img
             src="images/modern.webp"
-            alt="Modern stadium"
+            width="1000"
+            height="563"
+            alt="Modern view of Santiago Bernabéu stadium"
             loading="lazy"
           >
           <figcaption>Modern stadium</figcaption>
@@ -102,7 +112,9 @@
         <figure>
           <img
             src="images/match.webp"
-            alt="Match day"
+            width="1000"
+            height="563"
+            alt="Santiago Bernabéu stadium on a match day"
             loading="lazy"
           >
           <figcaption>Match day</figcaption>
@@ -111,12 +123,13 @@
         <figure>
           <img
             src="images/Santiago Bernabeu.webp"
-            alt="Old stadium"
+            width="620"
+            height="263"
+            alt="Historical view of Santiago Bernabéu stadium"
             loading="lazy"
           >
           <figcaption>Old stadium</figcaption>
         </figure>
-
       </div>
     </section>
 
@@ -124,9 +137,15 @@
       <div>
         <p class="small-title">MATCHES AND VISITS</p>
         <h2>Want to visit?</h2>
+
         <p>
           For current match dates, tickets and tour information,
           use the official Real Madrid website.
+        </p>
+
+        <p>
+          Read our <a href="#faq">stadium FAQ</a>
+          or try the <a href="#visit-form">demonstration form</a>.
         </p>
       </div>
 
@@ -138,19 +157,112 @@
       >OFFICIAL STADIUM PAGE →</a>
     </section>
 
+    <section class="container section" id="faq">
+      <p class="small-title purple-text">VISITOR QUESTIONS</p>
+      <h2>Stadium FAQ</h2>
+
+      <details>
+        <summary>Where can I find tickets and tour information?</summary>
+
+        <p>
+          Visit the
+          <a
+            href="https://www.realmadrid.com/en-US/bernabeu-stadium"
+            target="_blank"
+            rel="noopener noreferrer"
+          >official stadium website</a>
+          for current information about tickets and tours.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I book tickets on this website?</summary>
+
+        <p>
+          No. This is a student fan website.
+          The form below is only a demonstration.
+          It does not book tickets or send messages.
+        </p>
+      </details>
+
+      <details>
+        <summary>Where can I read about the stadium's history?</summary>
+
+        <p>
+          Open our
+          <a href="history.html#timeline">club history timeline</a>
+          to read about the opening of the stadium.
+        </p>
+      </details>
+    </section>
+
+    <section class="container section" id="visit-form">
+      <p class="small-title purple-text">FORM DEMONSTRATION</p>
+      <h2>Ask about a stadium visit</h2>
+
+      <p id="demo-note">
+        Demo only. Your information is not sent or stored.
+        Use sample details. This form does not book tickets
+        or send messages.
+      </p>
+
+      <form
+        class="demo-form"
+        action="demo-result.html"
+        method="get"
+        aria-describedby="demo-note"
+      >
+        <div class="form-field">
+          <label for="full-name">Name</label>
+
+          <input
+            id="full-name"
+            type="text"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+
+          <input
+            id="email"
+            type="email"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="question">
+            Question about a stadium visit
+          </label>
+         <br>
+
+          <textarea id="question" rows="5" required></textarea>
+        </div>
+
+        <button class="button dark-button" type="submit">
+          Check demo form
+        </button>
+      </form>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-content">
       <p><strong>REAL MADRID</strong> · Student fan website</p>
+
       <p>
         Club facts and photos:
-        <a href="https://www.realmadrid.com/en-US" target="_blank" rel="noopener noreferrer">
-          Official website
-        </a>
+        <a
+          href="https://www.realmadrid.com/en-US"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Official website</a>
       </p>
     </div>
   </footer>
-
 </body>
 </html>
