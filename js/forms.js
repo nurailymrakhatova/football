@@ -1,4 +1,3 @@
-// Both forms are local demonstrations. No values are sent or stored.
 document.querySelectorAll('[data-demo-form]').forEach((form) => {
   const fields = Array.from(form.querySelectorAll('[required]'));
   const status = document.getElementById(form.dataset.status);
@@ -74,9 +73,6 @@ document.querySelectorAll('[data-demo-form]').forEach((form) => {
       document.getElementById(`${field.id}-error`).textContent = '';
     });
   });
-
-  // Enable submission only after the demo handler is attached. Without JS,
-  // disabled submit buttons prevent personal data appearing in a URL.
   form.noValidate = true;
   form.querySelector('[type="submit"]').disabled = false;
 });
