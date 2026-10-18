@@ -6,7 +6,7 @@
 
   <title>Stadium | Real Madrid Fan Site</title>
 
-  <link rel="stylesheet" href="css/vendor/bootstrap-forms.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/forms.css">
@@ -209,18 +209,11 @@
         Use sample details. This form does not book tickets
         or send messages. All fields are required.
       </p>
-
-      <noscript><p>Please enable JavaScript to try the form demonstration.</p></noscript>
       <div class="fan-forms">
-      <p class="form-errors" id="contact-errors" role="alert"></p>
       <form
         id="contact-form"
-        class="row g-3"
+        class="row g-3 needs-validation" novalidate
         aria-describedby="demo-note"
-        data-demo-form
-        data-status="contact-success"
-        data-errors="contact-errors"
-        data-success="Demo successful! Your stadium message passed validation. No message was sent or stored."
       >
         <div class="col-12 col-md-6">
           <label class="form-label" for="full-name">Name</label>
@@ -229,7 +222,7 @@
             aria-describedby="full-name-help full-name-error">
           <div class="form-text" id="full-name-help">Use at least 2 characters.</div>
           <div class="valid-feedback">Name looks good.</div>
-          <div class="invalid-feedback" id="full-name-error"></div>
+          <div class="invalid-feedback" id="full-name-error">Enter a name with at least 2 characters.</div>
         </div>
         <div class="col-12 col-md-6">
           <label class="form-label" for="email">Email</label>
@@ -237,7 +230,7 @@
             autocomplete="email" required aria-describedby="email-help email-error">
           <div class="form-text" id="email-help">For example, fan@example.com.</div>
           <div class="valid-feedback">Email format looks good.</div>
-          <div class="invalid-feedback" id="email-error"></div>
+          <div class="invalid-feedback" id="email-error">Enter a valid email address.</div>
         </div>
         <div class="col-12">
           <label class="form-label" for="question">Message about a stadium visit</label>
@@ -246,10 +239,10 @@
             aria-describedby="question-help question-error"></textarea>
           <div class="form-text" id="question-help">Write 10–500 characters about your visit or question.</div>
           <div class="valid-feedback">Message length looks good.</div>
-          <div class="invalid-feedback" id="question-error"></div>
+          <div class="invalid-feedback" id="question-error">Enter a message with 10 to 500 characters.</div>
         </div>
         <div class="col-12 form-actions">
-          <button class="button dark-button" type="submit" disabled>Submit demo message</button>
+          <button class="button dark-button" type="submit">Submit demo message</button>
           <button class="button gold-button" type="reset">Reset</button>
         </div>
       </form>
