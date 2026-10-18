@@ -1,23 +1,20 @@
-/* Match the original navy, purple and gold site. Bootstrap is scoped to forms. */
+/* Keep the existing page layout when Bootstrap is loaded. */
+.container {padding-left: 0; padding-right: 0;}
+.visit-box {padding-left: 30px; padding-right: 30px;}
+h1, h2, h3 {font-weight: bold;}
+p {margin-bottom: 1em;}
+
+/* Form colours match the existing website. */
 .fan-forms {max-width: 820px;}
 .fan-forms .form-label, .fan-forms legend {font-weight: bold;}
-.fan-forms .form-control, .fan-forms .form-select {font-family: inherit; color: #17213d;}
+.fan-forms .form-control, .fan-forms .form-select {color: #17213d;}
 .fan-forms .form-text {color: #606a80;}
-/* Bootstrap's root-level feedback mixin needs a descendant inside our scope. */
-.fan-forms .is-invalid ~ .invalid-feedback,
-.fan-forms .is-valid ~ .valid-feedback {display: block;}
-.fan-forms .form-control:focus, .fan-forms .form-select:focus {
-  border-color: #514098;
-  box-shadow: 0 0 0 0.2rem rgb(81 64 152 / 18%);
-}
-.fan-forms fieldset {min-width: 0; margin: 0; border: 0;}
-.fan-forms legend {float: none; width: auto; padding: 0; margin-bottom: 8px; font-size: 16px;}
-.fan-forms .form-check-input:checked {background-color: #514098; border-color: #514098;}
-.fan-forms .form-check-input:focus {box-shadow: 0 0 0 0.2rem rgb(81 64 152 / 18%);}
+.fan-forms fieldset {border: 0;}
+.fan-forms legend {float: none; font-size: 16px; margin-bottom: 8px;}
 .fan-forms .form-actions {display: flex; flex-wrap: wrap; gap: 12px;}
 .fan-forms .button {border: 0; font-family: inherit; cursor: pointer;}
-.fan-forms .button:disabled {opacity: 0.5; cursor: not-allowed;}
+.fan-forms .form-control:focus, .fan-forms .form-select:focus {border-color: #514098; box-shadow: 0 0 0 0.2rem rgb(81 64 152 / 18%);}
+.fan-forms .form-check-input:checked {background-color: #514098; border-color: #514098;}
 .fan-forms .button:focus-visible {outline: 3px solid #514098; outline-offset: 3px;}
 .form-status {margin: 20px 0 0; padding: 16px; border-left: 4px solid #198754; background: #eaf5ee;}
-.form-errors {margin: 20px 0; padding: 16px; border-left: 4px solid #b02a37; background: #fff1f2;}
-.form-status:empty, .form-errors:empty {display: none;}
+.form-status:empty {display: none;}
