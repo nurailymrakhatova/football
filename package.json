@@ -1,0 +1,15 @@
+{
+  "name": "real-madrid-fan-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real Madrid student fan website — Assignment 5 teamwork",
+  "scripts": {
+    "build:css": "sass --silence-deprecation=import,global-builtin,color-functions --load-path=node_modules --style=compressed --no-source-map css/bootstrap-forms.scss css/vendor/bootstrap-forms.min.css",
+    "test": "node tests/forms.test.cjs"
+  },
+  "devDependencies": {
+    "bootstrap": "5.3.8",
+    "playwright": "1.62.1",
+    "sass": "1.93.2"
+  }
+}

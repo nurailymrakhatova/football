@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan Club | Real Madrid Fan Site</title>
+  <link rel="stylesheet" href="css/vendor/bootstrap-forms.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <script src="js/forms.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="logo" href="index.html">RM <span>REAL MADRID</span></a>
+      <nav class="main-nav" aria-label="Main menu">
+        <a href="index.html">Home</a>
+        <a href="team.html">Team</a>
+        <a href="history.html">History</a>
+        <a href="stadium.html">Stadium</a>
+        <a class="active" aria-current="page" href="register.html">Fan Club</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-heading purple-heading">
+      <div class="container">
+        <p class="small-title">REAL MADRID · FAN COMMUNITY</p>
+        <h1>JOIN THE FAN CLUB</h1>
+        <p>Share your passion for Real Madrid.</p>
+      </div>
+    </section>
+
+    <section class="container section" id="registration">
+      <p class="small-title purple-text">REGISTRATION DEMONSTRATION</p>
+      <h2>Your fan profile</h2>
+      <p id="registration-note">
+        Use sample details and a sample password. This demo checks your entries;
+        it does not create an account or send or store your information.
+        All fields are required except gender and interests.
+      </p>
+      <noscript><p>Please enable JavaScript to try the registration demonstration.</p></noscript>
+      <div class="fan-forms">
+        <p class="form-errors" id="registration-errors" role="alert"></p>
+        <form id="registration-form" class="row g-3" aria-describedby="registration-note"
+          data-demo-form data-status="registration-success" data-errors="registration-errors"
+          data-success="Demo registration successful! Your fan profile passed validation. No account was created and no information was sent or stored.">
+          <div class="col-12 col-md-6">
+            <label class="form-label" for="first-name">First Name</label>
+            <input class="form-control" id="first-name" name="firstName" type="text"
+              autocomplete="given-name" minlength="2" required
+              aria-describedby="first-name-help first-name-error">
+            <div class="form-text" id="first-name-help">At least 2 characters.</div>
+            <div class="valid-feedback">First name looks good.</div>
+            <div class="invalid-feedback" id="first-name-error"></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label" for="last-name">Last Name</label>
+            <input class="form-control" id="last-name" name="lastName" type="text"
+              autocomplete="family-name" minlength="2" required
+              aria-describedby="last-name-help last-name-error">
+            <div class="form-text" id="last-name-help">At least 2 characters.</div>
+            <div class="valid-feedback">Last name looks good.</div>
+            <div class="invalid-feedback" id="last-name-error"></div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="registration-email">Email</label>
+            <input class="form-control" id="registration-email" name="email" type="email"
+              autocomplete="email" required aria-describedby="registration-email-help registration-email-error">
+            <div class="form-text" id="registration-email-help">For example, fan@example.com.</div>
+            <div class="valid-feedback">Email format looks good.</div>
+            <div class="invalid-feedback" id="registration-email-error"></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" id="password" name="password" type="password"
+              autocomplete="new-password" minlength="8" required aria-describedby="password-help password-error">
+            <div class="form-text" id="password-help">At least 8 characters. Use a sample password.</div>
+            <div class="valid-feedback">Password length looks good.</div>
+            <div class="invalid-feedback" id="password-error"></div>
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label" for="confirm-password">Confirm Password</label>
+            <input class="form-control" id="confirm-password" name="confirmPassword" type="password"
+              autocomplete="new-password" minlength="8" required data-match="password"
+              aria-describedby="confirm-password-help confirm-password-error">
+            <div class="form-text" id="confirm-password-help">Repeat the same sample password.</div>
+            <div class="valid-feedback">Passwords match.</div>
+            <div class="invalid-feedback" id="confirm-password-error"></div>
+          </div>
+          <fieldset class="col-12">
+            <legend>Gender (optional)</legend>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="gender-woman" name="gender" type="radio" value="woman">
+              <label class="form-check-label" for="gender-woman">Woman</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="gender-man" name="gender" type="radio" value="man">
+              <label class="form-check-label" for="gender-man">Man</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="gender-unspecified" name="gender" type="radio" value="prefer-not-to-say">
+              <label class="form-check-label" for="gender-unspecified">Prefer not to say</label>
+            </div>
+          </fieldset>
+          <fieldset class="col-12">
+            <legend>Football interests (optional)</legend>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="interest-matches" name="interests" type="checkbox" value="matches">
+              <label class="form-check-label" for="interest-matches">Matches</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="interest-history" name="interests" type="checkbox" value="history">
+              <label class="form-check-label" for="interest-history">Club history</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="interest-stadium" name="interests" type="checkbox" value="stadium-tours">
+              <label class="form-check-label" for="interest-stadium">Stadium tours</label>
+            </div>
+          </fieldset>
+          <div class="col-12 col-md-6">
+            <label class="form-label" for="country">Country</label>
+            <select class="form-select" id="country" name="country" autocomplete="country-name"
+              required aria-describedby="country-help country-error">
+              <option value="">Choose your country</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Spain">Spain</option>
+              <option value="France">France</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Other">Other</option>
+            </select>
+            <div class="form-text" id="country-help">Choose Other if your country is not listed.</div>
+            <div class="valid-feedback">Country selected.</div>
+            <div class="invalid-feedback" id="country-error"></div>
+          </div>
+          <div class="col-12 form-actions">
+            <button class="button dark-button" type="submit" disabled>Submit demo registration</button>
+            <button class="button gold-button" type="reset">Reset</button>
+          </div>
+        </form>
+        <p class="form-status" id="registration-success" role="status" tabindex="-1"></p>
+      </div>
+      <p class="source-note">Have a stadium question? Open the <a href="stadium.html#visit-form">contact form</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p><strong>REAL MADRID</strong> · Student fan website</p>
+      <p>Club facts and photos:
+        <a href="https://www.realmadrid.com/en-US" target="_blank" rel="noopener noreferrer">Official website</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

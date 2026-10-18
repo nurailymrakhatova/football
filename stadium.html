@@ -6,8 +6,11 @@
 
   <title>Stadium | Real Madrid Fan Site</title>
 
+  <link rel="stylesheet" href="css/vendor/bootstrap-forms.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <script src="js/forms.js" defer></script>
 </head>
 
 <body>
@@ -22,6 +25,7 @@
         <a href="team.html">Team</a>
         <a href="history.html">History</a>
         <a class="active" aria-current="page" href="stadium.html">Stadium</a>
+        <a href="register.html">Fan Club</a>
       </nav>
     </div>
   </header>
@@ -203,50 +207,55 @@
       <p id="demo-note">
         Demo only. Your information is not sent or stored.
         Use sample details. This form does not book tickets
-        or send messages.
+        or send messages. All fields are required.
       </p>
 
+      <noscript><p>Please enable JavaScript to try the form demonstration.</p></noscript>
+      <div class="fan-forms">
+      <p class="form-errors" id="contact-errors" role="alert"></p>
       <form
-        class="demo-form"
-        action="demo-result.html"
-        method="get"
+        id="contact-form"
+        class="row g-3"
         aria-describedby="demo-note"
+        data-demo-form
+        data-status="contact-success"
+        data-errors="contact-errors"
+        data-success="Demo successful! Your stadium message passed validation. No message was sent or stored."
       >
-        <div class="form-field">
-          <label for="full-name">Name</label>
-
-          <input
-            id="full-name"
-            type="text"
-            autocomplete="name"
-            required
-          >
+        <div class="col-12 col-md-6">
+          <label class="form-label" for="full-name">Name</label>
+          <input class="form-control" id="full-name" name="fullName" type="text"
+            autocomplete="name" minlength="2" required
+            aria-describedby="full-name-help full-name-error">
+          <div class="form-text" id="full-name-help">Use at least 2 characters.</div>
+          <div class="valid-feedback">Name looks good.</div>
+          <div class="invalid-feedback" id="full-name-error"></div>
         </div>
-
-        <div class="form-field">
-          <label for="email">Email</label>
-
-          <input
-            id="email"
-            type="email"
-            autocomplete="email"
-            required
-          >
+        <div class="col-12 col-md-6">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" id="email" name="email" type="email"
+            autocomplete="email" required aria-describedby="email-help email-error">
+          <div class="form-text" id="email-help">For example, fan@example.com.</div>
+          <div class="valid-feedback">Email format looks good.</div>
+          <div class="invalid-feedback" id="email-error"></div>
         </div>
-
-        <div class="form-field">
-          <label for="question">
-            Question about a stadium visit
-          </label>
-         <br>
-
-          <textarea id="question" rows="5" required></textarea>
+        <div class="col-12">
+          <label class="form-label" for="question">Message about a stadium visit</label>
+          <textarea class="form-control" id="question" name="message" rows="5"
+            minlength="10" maxlength="500" required
+            aria-describedby="question-help question-error"></textarea>
+          <div class="form-text" id="question-help">Write 10–500 characters about your visit or question.</div>
+          <div class="valid-feedback">Message length looks good.</div>
+          <div class="invalid-feedback" id="question-error"></div>
         </div>
-
-        <button class="button dark-button" type="submit">
-          Check demo form
-        </button>
+        <div class="col-12 form-actions">
+          <button class="button dark-button" type="submit" disabled>Submit demo message</button>
+          <button class="button gold-button" type="reset">Reset</button>
+        </div>
       </form>
+      <p class="form-status" id="contact-success" role="status" tabindex="-1"></p>
+      </div>
+      <p class="source-note">Want to join the fan community? Try our <a href="register.html">fan registration demo</a>.</p>
     </section>
   </main>
 
