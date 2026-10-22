@@ -1,0 +1,32 @@
+body { background: #f4f4f8; color: #17213d; }
+.practice { padding-top: 36px; padding-bottom: 36px; max-width: 1000px; }
+.practice h1 { font-size: 38px; margin-bottom: 8px; }
+.task { padding: 24px; margin-top: 24px; border: 1px solid #d9dce6; background: white; }
+.task h2 { font-size: 25px; }
+.task label { display: block; font-weight: bold; margin-bottom: 8px; }
+.task input, .task button { font: inherit; padding: 10px 14px; border: 1px solid #767e90; border-radius: 4px; }
+.task input { background: white; color: #17213d; max-width: 100%; }
+.task button { background: #514098; color: white; border-color: #514098; cursor: pointer; }
+.task button:hover { background: #392b73; }
+.task :focus-visible { outline: 3px solid #9b6b08; outline-offset: 3px; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; }
+.task p { margin: 14px 0 0; overflow-wrap: anywhere; }
+.faq-item { margin-top: 12px; }
+.faq-item h3 { margin: 0; font-size: 17px; }
+.faq-question { text-align: left; width: 100%; }
+.search-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
+.search-card { padding: 18px; background: #eee9f7; }
+.search-card h3 { font-size: 18px; }
+#favourites-list { padding: 0; list-style: none; }
+#favourites-list li { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid #d9dce6; padding: 12px 0; }
+#favourites-list span { overflow-wrap: anywhere; min-width: 0; }
+.dark-theme { background: #10182b; color: #f3f4fa; color-scheme: dark; }
+.dark-theme .site-header, .dark-theme .task { background: #1b2540; border-color: #56617b; }
+.dark-theme .logo, .dark-theme .logo span, .dark-theme .main-nav a { color: #f3f4fa; }
+.dark-theme .search-card { background: #303656; }
+.dark-theme .task input { background: #10182b; color: #f3f4fa; border-color: #8791ab; }
+.dark-theme .task button { background: #d7cdfa; color: #211a3f; border-color: #d7cdfa; }
+.dark-theme .task button:hover { background: #bdb0ed; }
+.dark-theme :focus-visible { outline-color: #f1ce7d; }
+[hidden] { display: none !important; }
+@media (max-width: 700px) { .search-grid { grid-template-columns: 1fr; } .task { padding: 18px; } .practice h1 { font-size: 30px; } }
