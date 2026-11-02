@@ -1,38 +1,54 @@
-const form=document.querySelector('.needs-validation');
-const success=document.querySelector('.form-status');
-const password=document.getElementById('password');
-const confirmPassword=document.getElementById('confirm-password');
-function checkPasswords() {
-  if (password.value!==confirmPassword.value) {
-    confirmPassword.setCustomValidity('Passwords must match.');
-  } else {
-    confirmPassword.setCustomValidity('');
-  }
-}
+$(document).ready(function () {
+  $(".needs-validation").each(function () {
+    const form = $(this);
+    const fields = form.find("input[required], textarea[required], select[required]");
+    const success = form.parent().find(".form-status");
 
-if (password) {
-  password.addEventListener('input', checkPasswords);
-  confirmPassword.addEventListener('input', checkPasswords);
-}
-
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  success.textContent = '';
-  if (password) {
-    checkPasswords();
-  }
-  form.classList.add('was-validated');
-  if (form.checkValidity()) {
-    success.textContent='Demo successful! No information was sent or stored.';
-  }
-});
-form.addEventListener('input', function () {
-  success.textContent='';
-});
-form.addEventListener('reset', function () {
-  form.classList.remove('was-validated');
-  success.textContent='';
-  if (confirmPassword) {
-    confirmPassword.setCustomValidity('');
-  }
+    // Keep the rules from Assignment 5 and show feedback with jQuery.
+    function validateField(field) {
+      const type = field.attr("type");
+      const value = type === "password" ? field.val() : field.val().trim();
+      const minimum = Number(field.attr("minlength")) || 0;
+      const maximum = Number(field.attr("maxlength")) || Infinity;
+      let valid = value.trim() !== "" && value.length >= minimum && value.length <= maximum;
+      if (type === "email") {
+        valid = valid && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      }
+      if (field.attr("id") === "confirm-password") {
+        valid = valid && value === $("#password").val();
+      }
+      field.toggleClass("is-invalid", !valid).toggleClass("is-valid", valid);
+      field.attr("aria-invalid", String(!valid));
+      return valid;
+    }
+    form.on("submit", function (event) {
+      event.preventDefault();
+      success.stop(true, true).hide().text("");
+      form.addClass("was-checked");
+      let valid = true;
+      fields.each(function () {
+        if (!validateField($(this))) {
+          valid = false;
+        }
+      });
+      if (valid) {
+        success.text("Demo successful! No information was sent or stored. Your entries are kept until you choose Reset.").fadeIn(200).trigger("focus");
+      } else {
+        form.find(".is-invalid").first().trigger("focus");
+      }
+    });
+    form.on("input change", "input, textarea, select", function () {
+      success.stop(true, true).hide().text("");
+      if (form.hasClass("was-checked")) {
+        fields.each(function () {
+          validateField($(this));
+        });
+      }
+    });
+    form.on("reset", function () {
+      form.removeClass("was-checked");
+      fields.removeClass("is-invalid is-valid").removeAttr("aria-invalid");
+      success.stop(true, true).hide().text("");
+    });
+  });
 });
