@@ -1,97 +1,83 @@
 # Real Madrid Fan Website
 
-A student website about Real Madrid, its players, history and stadium.
+Assignment 6: jQuery and completed website. Group: MT-2501.
 
-## Team and existing page responsibilities
+A student fan website about Real Madrid, its players, history and Santiago Bernabeu stadium. The existing pages and Assignment 5 forms are kept and connected to the Fan Zone.
 
-| Team member | Page |
-|---|---|
-| Amantay Aiymzhan | Home (index.html) |
-| Aruzhan Meirkhan | Team (team.html) |
-| Ayazhan Serikkazy | History (history.html) |
-| Nurailym Rakhatova | Stadium (stadium.html) |
+## Team
 
-Each member must make their own identifiable commits for Assignment 5 and explain their contribution during defence.
-
-## How to open
-
-Open index.html in a browser, or open the project folder in VS Code and use Live Server. Keep the css, js and images folders together with the HTML files. No installation or build is needed.
-
-- Contact form: Stadium page, "Ask about a stadium visit" section.
-- Registration form: Fan Club in the navigation.
-- [Published website](https://nurailymrakhatova.github.io/football/)
-
-## Assignment 5 - Teamwork
-
-### Tasks 0 and 1: Contact form
-
-The contact form has Name, Email, Message and Submit controls. Every control has a name, a unique id and a connected label.
-
-- `required` makes all three fields mandatory.
-- `type="email"` checks the email format.
-- `minlength="2"` sets the minimum name length.
-- `minlength="10"` and `maxlength="500"` set the message length limits.
-
-### Task 2: Bootstrap styling and feedback
-
-The forms use Bootstrap `form-label`, `form-control`, `form-select`, `row`, `g-3`, `col-12` and `col-md-6` classes. Paired fields are next to each other on larger screens and stack on mobile screens. Helper text explains the input rules.
-
-Bootstrap CSS is stored in css/bootstrap.min.css. The colours and page layout use the existing website styles and css/forms.css. No Bootstrap JavaScript is needed.
-
-The submit handler in js/forms.js follows the Bootstrap validation example. It adds `was-validated` and uses `checkValidity()`. The `valid-feedback` and `invalid-feedback` messages follow the actual HTML validity of each field. `preventDefault()` keeps this demonstration on the same page.
-
-### Task 3: Registration form
-
-The form includes required first and last names (minimum 2 characters), email, password and confirmation (minimum 8 characters), and a required country dropdown with an empty default option.
-
-Gender is optional, includes "Prefer not to say", and uses a fieldset and legend. Football interests are optional checkboxes.
-
-`checkPasswords()` compares the two passwords. `setCustomValidity()` sets a mismatch error or clears it when the values match. Both password fields trigger the check when edited.
-
-Valid forms show a demonstration success message. Reset clears the values, Bootstrap feedback, success message and custom password error. No account is created and no information is sent or stored.
-
-### Task 4: Test results
-
-Tested in Microsoft Edge on 18 October 2026. Sample contact data: Name `Sample Fan`, Email `fan@example.com`, Message `Can I visit the stadium museum?`. Sample registration: First Name `Sample`, Last Name `Fan`, Email `fan@example.com`, both passwords `Madrid123!`, Country `Kazakhstan`.
-
-| Test input or action | Expected result | Actual result |
+| Team member | Existing page responsibility | Repository evidence |
 |---|---|---|
-| Submit empty contact form | Required fields show errors; no success | Passed: 3 errors, no success |
-| Name `A`, email `wrong`, message `Too short` (9 characters) | Reject short name, invalid email and short message | Passed: all 3 fields invalid |
-| Otherwise valid contact with messages of 10 and 500 characters | Accept both boundary lengths | Passed: success for both lengths |
-| Type a 501st character into Message | Prevent input longer than 500 characters | Passed: message remains 500 characters |
-| Valid contact data | Show success | Passed: valid feedback and demo success |
-| Submit empty registration | Required fields show errors; optional choices stay optional | Passed: 6 errors, no success |
-| Names `A` and `B`, email `bad`, both passwords `1234567`, country Kazakhstan | Reject short names, invalid email and short passwords | Passed: 5 invalid fields |
-| Password `Madrid123!`, confirmation `Different123!` | Reject mismatched passwords | Passed: confirmation error, no success |
-| Correct confirmation, then change the original password | Clear the mismatch, then detect the new mismatch | Passed: feedback updates after each edit |
-| Otherwise valid registration with no country selected | Reject missing country | Passed: country error, no success |
-| All required registration values valid; optional choices empty | Show success | Passed: demo success |
-| Select optional choices, cause a password error, then Reset | Clear all values, choices and feedback | Passed: form cleared; valid submission works afterwards |
-| Reset contact after success | Clear values and feedback | Passed: empty form with no success message |
-| Pages at 375, 768 and 1440 pixels | No horizontal scrolling; paired fields stack on mobile | Passed: layouts fit at all three widths |
+| Amantay Aiymzhan | Home, Fan Zone and shared integration | 2293e17, eb2e031, 815cb8e |
+| Aruzhan Meirkhan | Team page and squad | fdece75 |
+| Ayazhan Serikkazy | History, shared styles and form work | 6300b1e, b0e7753, 11c82a3 |
+| Nurailym Rakhatova | Stadium, gallery and visit information | 178df9e, 3ac407e |
 
-### Screenshots
+These references describe recorded work in the existing repository. The Assignment 6 update adds the jQuery integration and automated checks. Each member should review their page and explain the shared changes during defence; no unperformed individual review is claimed.
 
-Contact form, invalid and valid states:
+## Open the project
 
-![Invalid contact form](docs/screenshots/contact-invalid-desktop.png)
-![Valid contact form](docs/screenshots/contact-valid-desktop.png)
+1. Extract the project ZIP.
+2. Open the football folder in VS Code.
+3. Open index.html in a browser, or use Live Server.
 
-Registration form, invalid and valid states:
+No installation or build is required. CSS, images, Bootstrap CSS and jQuery are local files, so the project also works without an internet connection. Keep the HTML files, css, js and images folders together.
 
-![Invalid registration form](docs/screenshots/registration-invalid-desktop.png)
-![Valid registration form](docs/screenshots/registration-valid-desktop.png)
+- Live website: https://nurailymrakhatova.github.io/football/
+- Repository: https://github.com/nurailymrakhatova/football
 
-Mobile layouts at 375 pixels:
+## Files
 
-![Mobile contact form](docs/screenshots/contact-mobile.png)
-![Mobile registration form](docs/screenshots/registration-mobile.png)
+- index.html: home and navigation
+- team.html: player cards, squad and coach
+- history.html: club history and timeline
+- stadium.html: stadium, gallery, FAQ and enquiry demonstration
+- register.html: fan registration demonstration
+- interactive.html: Fan Zone and jQuery interactions
+- demo-result.html: explanation of frontend form limitations
+- css/style.css: common styles
+- css/responsive.css: shared media queries
+- css/interactive.css: Fan Zone styles and dark theme
+- css/forms.css and css/bootstrap.min.css: existing form appearance
+- js/interactive.js: welcome, theme, FAQ, filtering and favourites
+- js/forms.js: jQuery validation for both forms
+- js/jquery-3.7.1.min.js: local jQuery library
+- images/: original website photos
+- docs/screenshots/: retained Assignment 5 evidence
 
-## Learning resources
+## jQuery feature map
 
-- Frontend Week 4: Bootstrap and Media Queries.
-- [Bootstrap forms](https://getbootstrap.com/docs/5.3/forms/overview/)
-- [Bootstrap validation example](https://getbootstrap.com/docs/5.3/forms/validation/)
-- [MDN web forms](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms)
-- [W3Schools HTML input attributes](https://www.w3schools.com/html/html_form_attributes.asp)
+| Task | Page and section | Main methods |
+|---|---|---|
+| 1. Events and DOM updates | Fan Zone: Welcome, Madridista; appearance | .ready(), .on(), .val(), .text(), .addClass(), .removeClass(), .toggleClass() |
+| 2. Animation | Fan Zone: three FAQ items and favourites feedback | .stop(true, true), .slideDown(), .slideUp(), .fadeIn(), .delay(), .fadeOut(), .attr() |
+| 3. Combined filtering | Fan Zone: Explore football topics | .on('input'), .on('change'), .each(), .find(), .toggle(), .text() |
+| 4. Dynamic list | Fan Zone: My football favourites | .append(), .text(), delegated .on('click', '.remove-item', ...), .closest(), .remove() |
+| 5. Form validation | Stadium enquiry and Fan Club registration | .on('submit'), .val(), .toggleClass(), .attr(), .text(), .fadeIn() |
+
+jQuery loads before the external project scripts. Handlers are initialised after DOM ready. There are no inline event attributes or Bootstrap JavaScript components. User input is inserted with .text(), never as raw HTML.
+
+## Complete user journey
+
+Open Home, then Fan Zone. Search for visit and choose the Stadium category. Open Plan a visit, read the visitor FAQ, then complete the enquiry with Sample Fan, fan@example.com and Can I visit the stadium museum? Submit the form to see its demo confirmation.
+
+The same navigation appears on all seven pages. Topic cards link to real pages or sections. The historical timeline anchor and a missing image description have been fixed. Duplicate responsive CSS rules are now kept only in css/responsive.css.
+
+## Testing
+
+Tested on 2 November 2026 in Google Chrome 156.0.8078.74 and Microsoft Edge 156.0.4314.58. Fifteen functional and integration cases passed in each browser locally. All seven pages were checked at 375, 768 and 1440 pixels. Cases cover empty names, theme state, FAQ mouse and keyboard controls, rapid clicks, combined filters, no results, reset filters, safe dynamic text, delegated deletion, empty favourites, invalid forms, valid forms, message length boundaries, registration passwords, navigation and assets.
+
+The shared report contains the detailed steps, expected and actual results, screenshots and published-site verification. Retained Assignment 5 screenshots are historical evidence, not the Assignment 6 test results.
+
+## Frontend limitations
+
+This is a student fan website, not an official Real Madrid service. Forms validate entries only: no message, booking, payment or account is created. Valid form values remain until Reset or reload. Editing a value clears the previous success message. Favourites and the Fan Zone theme are kept only while the page is open; no database or local storage is used.
+
+## Resources
+
+- jQuery API: https://api.jquery.com/
+- jQuery Learning Center: https://learn.jquery.com/
+- jQuery 3.7.1: https://code.jquery.com/jquery-3.7.1.min.js
+- MDN: https://developer.mozilla.org/
+- Bootstrap CSS: https://getbootstrap.com/docs/5.3/forms/overview/
+- Club facts and photos: https://www.realmadrid.com/en-US

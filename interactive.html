@@ -6,7 +6,9 @@
   <title>Fan Zone | Real Madrid Fan Site</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/interactive.css">
+  <script src="js/jquery-3.7.1.min.js" defer></script>
   <script src="js/interactive.js" defer></script>
 </head>
 <body>
@@ -25,64 +27,70 @@
   </header>
   <main class="container practice">
     <h1>Real Madrid Fan Zone</h1>
-    <p>Part 1 — DOM Manipulation and Events</p>
+    <p>Explore the club, find a topic and make your football favourites list.</p>
     <section class="task" aria-labelledby="task-0">
-      <h2 id="task-0">Task 0. Welcome message</h2>
+      <h2 id="task-0">Welcome, Madridista</h2>
       <label for="fan-name">Your name</label>
       <div class="controls">
-        <input id="fan-name" type="text">
+        <input id="fan-name" type="text" maxlength="80" aria-describedby="welcome-message">
         <button id="welcome-button" type="button">Show welcome</button>
       </div>
       <p id="welcome-message" role="status">Enter your name to join the fan zone.</p>
     </section>
     <section class="task" aria-labelledby="task-1">
-      <h2 id="task-1">Task 1. Light and dark themes</h2>
-      <button id="theme-button" type="button">Switch to dark theme</button>
+      <h2 id="task-1">Fan Zone appearance</h2>
+      <button id="theme-button" type="button" aria-pressed="false">Switch to dark theme</button>
     </section>
     <section class="task" aria-labelledby="task-2">
-      <h2 id="task-2">Task 2. Frequently asked questions</h2>
+      <h2 id="task-2">Frequently asked questions</h2>
       <div class="faq-item">
         <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-1">What is this website about?</button></h3>
-        <p id="answer-1" hidden>This student fan website introduces Real Madrid, its team, history and stadium.</p>
+        <div id="answer-1" class="faq-answer"><p>This student fan website introduces Real Madrid, its <a href="team.html">players</a>, <a href="history.html">history</a> and <a href="stadium.html">stadium</a>.</p></div>
       </div>
       <div class="faq-item">
         <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-2">Where can I read about the stadium?</button></h3>
-        <p id="answer-2" hidden>Open the Stadium page to explore the Santiago Bernabéu.</p>
+        <div id="answer-2" class="faq-answer"><p>Open the <a href="stadium.html">Stadium page</a> to explore the Santiago Bernabéu. Its enquiry form is a demonstration and does not book tickets.</p></div>
       </div>
       <div class="faq-item">
         <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="answer-3">How do I make my favourites list?</button></h3>
-        <p id="answer-3" hidden>Use Task 4 below to add your favourite players or football topics. Remove an item with its Remove button.</p>
+        <div id="answer-3" class="faq-answer"><p>Add players or football topics to <a href="#favourites">My football favourites</a>. Use Remove to delete an item. The list lasts until this page is reloaded.</p></div>
       </div>
     </section>
-    <section class="task" aria-labelledby="task-3">
-      <h2 id="task-3">Task 3. Search football topics</h2>
-      <label for="topic-search">Search by title</label>
-      <input id="topic-search" type="search">
+    <section class="task" aria-labelledby="task-3" id="topics">
+      <h2 id="task-3">Explore football topics</h2>
+      <div class="filter-controls">
+        <div><label for="topic-search">Search by title</label><input id="topic-search" type="search"></div>
+        <div><label for="topic-category">Category</label><select id="topic-category"><option value="all">All</option><option value="team">Team</option><option value="club">Club</option><option value="stadium">Stadium</option></select></div>
+        <button id="clear-filters" type="button">Clear filters</button>
+      </div>
       <p id="search-count" role="status">Matching topics: 6</p>
-      <p id="no-results" hidden>No results found</p>
+      <p id="no-results">No results found</p>
       <div class="search-grid">
-        <article class="search-card"><h3>Real Madrid Team</h3><p>Players who wear the club shirt.</p></article>
-        <article class="search-card"><h3>Club History</h3><p>Explore the club's story.</p></article>
-        <article class="search-card"><h3>Santiago Bernabéu Stadium</h3><p>The home ground in Madrid.</p></article>
-        <article class="search-card"><h3>Football Training</h3><p>Practice and preparation for a match.</p></article>
-        <article class="search-card"><h3>Match Day</h3><p>The atmosphere of a football match.</p></article>
-        <article class="search-card"><h3>Real Madrid Fans</h3><p>Supporters cheering for the club.</p></article>
+        <article class="search-card" data-category="team"><h3>Real Madrid Team</h3><p>Meet six players from different positions.</p><a href="team.html#players">Meet the players →</a></article>
+        <article class="search-card" data-category="club"><h3>Club History</h3><p>Explore the club's story from 1902.</p><a href="history.html#timeline">Read the timeline →</a></article>
+        <article class="search-card" data-category="stadium"><h3>Santiago Bernabéu Stadium</h3><p>Discover the home ground in Madrid.</p><a href="stadium.html">Explore the stadium →</a></article>
+        <article class="search-card" data-category="team"><h3>Players by Position</h3><p>See the squad grouped by its role on the pitch.</p><a href="team.html#squad">View the squad →</a></article>
+        <article class="search-card" data-category="stadium"><h3>Stadium Visit</h3><p>Read visitor information and try a demo enquiry.</p><a href="stadium.html#faq">Plan a visit →</a></article>
+        <article class="search-card" data-category="club"><h3>Real Madrid Fans</h3><p>Try the fan club registration demonstration.</p><a href="register.html#registration">Visit the fan club →</a></article>
       </div>
     </section>
-    <section class="task" aria-labelledby="task-4">
-      <h2 id="task-4">Task 4. My football favourites</h2>
+    <section class="task" aria-labelledby="task-4" id="favourites">
+      <h2 id="task-4">My football favourites</h2>
+      <p>Your list stays on this page until you reload it.</p>
       <form id="favourites-form">
         <label for="favourite-input">Player or football topic</label>
         <div class="controls">
-          <input id="favourite-input" type="text" aria-describedby="list-message">
+          <input id="favourite-input" type="text" maxlength="100" aria-describedby="list-message">
           <button type="submit">Add</button>
         </div>
       </form>
       <p id="list-message" role="status"></p>
       <p id="item-count" role="status">Items: 0</p>
+      <p id="empty-list">Your favourites list is empty.</p>
       <ul id="favourites-list"></ul>
+      <p id="list-status" role="status"></p>
     </section>
   </main>
-  <footer class="site-footer"><div class="container footer-content"><p>REAL MADRID · Student fan website</p></div></footer>
+  <footer class="site-footer"><div class="container footer-content"><p><strong>REAL MADRID</strong> · Student fan website</p><p>Club facts and photos: <a href="https://www.realmadrid.com/en-US" target="_blank" rel="noopener noreferrer">Official website</a></p></div></footer>
 </body>
 </html>
