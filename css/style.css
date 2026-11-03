@@ -58,7 +58,7 @@ section[id],article[id] { scroll-margin-top:30px; }
 .hero-description { max-width:490px; margin-top:22px; color:#e2e5ed; line-height:1.65; }
 .hero-copy .button { margin-top:24px; }
 .home-hero { min-height:650px; }
-.home-hero .hero-image { object-position:center 28%; }
+.home-hero .hero-image { width:125%; max-width:none; object-position:center 28%; }
 .home-hero .hero-shade { background:linear-gradient(90deg,#071024c9,transparent 85%); }
 .home-hero .hero-copy { padding-bottom:75px; }
 .home-hero h1 { font-size:76px; max-width:650px; letter-spacing:-3px; }

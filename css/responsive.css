@@ -93,9 +93,9 @@
   .hero-copy .button { margin-top:22px; }
   .hero-shade { background:linear-gradient(0deg,#071024e6,#07102440 90%); }
   .home-hero { min-height:620px; }
-  .home-hero .hero-copy { padding-top:280px; padding-bottom:38px; }
+  .home-hero .hero-copy { padding-top:360px; padding-bottom:38px; }
   .home-hero h1 { font-size:47px; letter-spacing:-2px; }
-  .home-hero .hero-image { object-position:57% center; }
+  .home-hero .hero-image { width:100%; object-position:57% center; }
   .home-hero .hero-shade { background:linear-gradient(0deg,#071024f2,#07102412 88%); }
   .home-hero .hero-description { max-width:260px; }
   .hero-bottom .container { min-height:62px; }
