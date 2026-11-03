@@ -57,11 +57,11 @@ section[id],article[id] { scroll-margin-top:30px; }
 .hero-copy .eyebrow { color:#d7bb84; margin-bottom:20px; }
 .hero-description { max-width:490px; margin-top:22px; color:#e2e5ed; line-height:1.65; }
 .hero-copy .button { margin-top:24px; }
-.home-hero { min-height:650px; }
-.home-hero .hero-image { width:125%; max-width:none; object-position:center 28%; }
-.home-hero .hero-shade { background:linear-gradient(90deg,#071024c9,transparent 85%); }
-.home-hero .hero-copy { padding-bottom:75px; }
-.home-hero h1 { font-size:76px; max-width:650px; letter-spacing:-3px; }
+.home-hero { min-height:0; display:block; }
+.home-hero .hero-image { position:relative; width:100%; height:auto; object-fit:contain; object-position:center; }
+.home-hero .hero-shade { background:linear-gradient(0deg,#071024d9,transparent 62%),linear-gradient(90deg,#07102470,transparent 65%); }
+.home-hero .hero-copy { position:absolute; left:0; right:0; bottom:0; padding-top:0; padding-bottom:45px; }
+.home-hero h1 { font-size:58px; max-width:540px; letter-spacing:-2px; }
 .home-hero .hero-description { max-width:370px; }
 .hero-bottom { background:var(--navy); color:#fff; }
 .hero-bottom .container { min-height:58px; display:flex; align-items:center; justify-content:space-between; gap:20px; }

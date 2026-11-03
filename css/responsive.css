@@ -3,7 +3,7 @@
   .container { width:calc(100% - 64px); }
   .main-nav { gap:22px; }
   .logo>span { display:none; }
-  .home-hero h1 { font-size:66px; }
+  .home-hero h1 { font-size:48px; }
   .editorial-grid { grid-template-columns:repeat(3,1fr); gap:14px; }
   .editorial-card { height:310px; }
   .editorial-card h3 { font-size:25px; }
@@ -27,12 +27,13 @@
   .main-nav { gap:18px; }
   .main-nav a { font-size:9px; }
   .page-hero { min-height:480px; }
-  .home-hero { min-height:600px; }
+  .home-hero { min-height:0; padding-top:100px; }
   .hero-copy h1 { font-size:54px; }
-  .home-hero h1 { font-size:60px; }
+  .home-hero h1 { font-size:48px; }
   .hero-image { object-position:58% center; }
-  .home-hero .hero-image { object-position:57% center; }
-  .home-hero .hero-shade { background:linear-gradient(90deg,#071024bd,#07102416),linear-gradient(0deg,#071024b0,transparent 80%); }
+  .home-hero .hero-image { width:100%; height:auto; }
+  .home-hero .hero-shade { display:none; }
+  .home-hero .hero-copy { position:relative; padding-top:30px; padding-bottom:36px; }
   .hero-copy { padding-top:160px; padding-bottom:45px; }
   .section-heading h2 { font-size:24px; }
   .score-line { flex-wrap:wrap; justify-content:center; text-align:center; }
@@ -92,11 +93,10 @@
   .hero-copy .eyebrow { font-size:8px; letter-spacing:1.3px; margin-bottom:16px; }
   .hero-copy .button { margin-top:22px; }
   .hero-shade { background:linear-gradient(0deg,#071024e6,#07102440 90%); }
-  .home-hero { min-height:620px; }
-  .home-hero .hero-copy { padding-top:360px; padding-bottom:38px; }
-  .home-hero h1 { font-size:47px; letter-spacing:-2px; }
-  .home-hero .hero-image { width:100%; object-position:57% center; }
-  .home-hero .hero-shade { background:linear-gradient(0deg,#071024f2,#07102412 88%); }
+  .home-hero { min-height:0; padding-top:83px; }
+  .home-hero .hero-copy { padding-top:26px; padding-bottom:32px; }
+  .home-hero h1 { font-size:38px; letter-spacing:-1.5px; }
+  .home-hero .hero-image { width:100%; height:auto; }
   .home-hero .hero-description { max-width:260px; }
   .hero-bottom .container { min-height:62px; }
   .hero-bottom p { font-size:7px; letter-spacing:.7px; max-width:175px; }
