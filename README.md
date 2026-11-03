@@ -2,7 +2,7 @@
 
 Assignment 6: jQuery and completed website. Group: MT-2501.
 
-A student fan website about Real Madrid, its players, history and Santiago Bernabeu stadium. The existing pages and Assignment 5 forms are kept and connected to the Fan Zone.
+A student fan website about Real Madrid, its players, history and Santiago Bernabeu stadium. All seven pages share an editorial football design inspired by the supplied reference: full-width photography, navy and gold colours, square buttons, player portraits and fine grid dividers. The existing forms and all five jQuery tasks are preserved.
 
 ## Team
 
@@ -21,7 +21,7 @@ These references describe recorded work in the existing repository. The Assignme
 2. Open the football folder in VS Code.
 3. Open index.html in a browser, or use Live Server.
 
-No installation or build is required. CSS, images, Bootstrap CSS and jQuery are local files, so the project also works without an internet connection. Keep the HTML files, css, js and images folders together.
+No installation or build is required. CSS, images, the club crest and jQuery are local files, so the project also works without an internet connection. Keep the HTML files, css, js and images folders together.
 
 - Live website: https://nurailymrakhatova.github.io/football/
 - Repository: https://github.com/nurailymrakhatova/football
@@ -38,11 +38,13 @@ No installation or build is required. CSS, images, Bootstrap CSS and jQuery are 
 - css/style.css: common styles
 - css/responsive.css: shared media queries
 - css/interactive.css: Fan Zone styles and dark theme
-- css/forms.css and css/bootstrap.min.css: existing form appearance
+- css/forms.css: plain CSS form layout and validation feedback
+- js/site.js: keyboard-accessible mobile navigation
 - js/interactive.js: welcome, theme, FAQ, filtering and favourites
 - js/forms.js: jQuery validation for both forms
 - js/jquery-3.7.1.min.js: local jQuery library
-- images/: original website photos
+- images/: locally saved photos and crest.png, used as the favicon on every page
+- images/SOURCES.md: original links for the downloaded photographs
 - docs/screenshots/: retained Assignment 5 evidence
 
 ## jQuery feature map
@@ -55,7 +57,7 @@ No installation or build is required. CSS, images, Bootstrap CSS and jQuery are 
 | 4. Dynamic list | Fan Zone: My football favourites | .append(), .text(), delegated .on('click', '.remove-item', ...), .closest(), .remove() |
 | 5. Form validation | Stadium enquiry and Fan Club registration | .on('submit'), .val(), .toggleClass(), .attr(), .text(), .fadeIn() |
 
-jQuery loads before the external project scripts. Handlers are initialised after DOM ready. There are no inline event attributes or Bootstrap JavaScript components. User input is inserted with .text(), never as raw HTML.
+jQuery loads before the external project scripts. Handlers are initialised after DOM ready. There are no inline event attributes, CSS frameworks, Bootstrap components, backend or build tools. jQuery is retained because Assignment 6 requires it. User input is inserted with .text(), never as raw HTML.
 
 ## Complete user journey
 
@@ -65,7 +67,7 @@ The same navigation appears on all seven pages. Topic cards link to real pages o
 
 ## Testing
 
-Tested on 2 November 2026 in Google Chrome 156.0.8078.74 and Microsoft Edge 156.0.4314.58. Fifteen functional and integration cases passed in each browser locally. All seven pages were checked at 375, 768 and 1440 pixels. Cases cover empty names, theme state, FAQ mouse and keyboard controls, rapid clicks, combined filters, no results, reset filters, safe dynamic text, delegated deletion, empty favourites, invalid forms, valid forms, message length boundaries, registration passwords, navigation and assets.
+Tested on 3 November 2026 in Google Chrome 156.0.8078.80 and Microsoft Edge 156.0.4314.58. Seventeen functional and integration cases passed in each browser locally: 34 checks in total, including mobile menu keyboard controls and offline use. All seven pages were checked at 375, 768 and 1440 pixels. Cases cover empty names, theme state, FAQ mouse and keyboard controls, rapid clicks, combined filters, no results, reset filters, safe dynamic text, delegated deletion, empty favourites, invalid forms, valid forms, message length boundaries, registration passwords, navigation and assets.
 
 The shared report contains the detailed steps, expected and actual results, screenshots and published-site verification. Retained Assignment 5 screenshots are historical evidence, not the Assignment 6 test results.
 
@@ -79,5 +81,5 @@ This is a student fan website, not an official Real Madrid service. Forms valida
 - jQuery Learning Center: https://learn.jquery.com/
 - jQuery 3.7.1: https://code.jquery.com/jquery-3.7.1.min.js
 - MDN: https://developer.mozilla.org/
-- Bootstrap CSS: https://getbootstrap.com/docs/5.3/forms/overview/
+- Image credits: images/SOURCES.md
 - Club facts and photos: https://www.realmadrid.com/en-US
