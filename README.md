@@ -45,7 +45,6 @@ No installation or build is required. CSS, images, the club crest and jQuery are
 - js/jquery-3.7.1.min.js: local jQuery library
 - images/: locally saved photos and crest.png, used as the favicon on every page
 - images/SOURCES.md: original links for the downloaded photographs
-- docs/screenshots/: retained Assignment 5 evidence
 
 ## jQuery feature map
 
