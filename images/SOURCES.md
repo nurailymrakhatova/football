@@ -2,6 +2,8 @@
 
 The images are saved in this folder and loaded with relative paths. The website does not load remote image URLs, external fonts or CDN scripts. Photography and club marks belong to their respective owners; this is a student fan project, not an official club service.
 
+The Home hero photo, `hero-madrid.jpg`, was supplied by the project owner on 3 November 2026 and is stored locally without modification.
+
 New photographs downloaded from the official Real Madrid website on 3 November 2026:
 
 | Local file | Source |
