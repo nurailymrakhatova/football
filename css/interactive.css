@@ -45,15 +45,4 @@
 .task .remove-item { background:transparent; color:#8d2828; border:1px solid #c8c0ba; min-height:32px; font-size:10px; padding:5px 10px; flex-shrink:0; }
 #empty-list { padding:20px; background:var(--paper); border-left:2px solid var(--gold); }
 #list-status { display:none; padding:10px; background:#eaf3ec; color:#235232; font-size:11px; }
-/* Keep text, borders and controls readable in both themes. */
-.dark-theme { --ink:#eef0f5; --muted:#bbc2ce; --line:#344158; --paper:#1d2a40; }
-.dark-theme .site-shell { background:#142036; }
-.dark-theme .gold-text { color:#cfb881; }
-.dark-theme .task input,.dark-theme .task select { background:#1d2a40; color:#fff; border-color:#65718a; }
-.dark-theme .task input.input-error { border-color:#ef8e8e; }
-.dark-theme .task button:not(.faq-question):not(.remove-item) { background:#d1b575; color:#101a30; }
-.dark-theme .task .remove-item { color:#ffb1b1; border-color:#786a72; }
-.dark-theme #list-message { color:#ffb1b1; }
-.dark-theme #list-status { background:#244b39; color:#daefdf; }
-.dark-theme .faq-question::after { color:#cfb881; }
 .task .faq-question:focus-visible { outline-offset:-3px; padding-left:8px; }
