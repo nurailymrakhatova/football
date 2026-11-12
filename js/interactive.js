@@ -1,23 +1,21 @@
 $(document).ready(function () {
-  // 1. Welcome message and theme.
+  // 1. Update the greeting while typing; open the window only on submit.
   function showWelcome() {
     const name = $("#fan-name").val().trim();
-    if (name === "") {
-      $("#welcome-message").text("Please enter your name.");
-      $("#fan-name").addClass("input-error").attr("aria-invalid", "true");
-    } else {
-      $("#welcome-message").text("Welcome, " + name + "! Hala Madrid!");
-      $("#fan-name").removeClass("input-error").attr("aria-invalid", "false");
-    }
+    const valid = name !== "";
+    $("#fan-name").toggleClass("input-error", !valid).attr("aria-invalid", String(!valid));
+    $("#welcome-message").text(valid ? "Welcome, " + name + "! Hala Madrid!" : "Please enter your name.");
+    return valid;
   }
-  $("#welcome-button").on("click", showWelcome);
-  $("#fan-name").on("input", showWelcome);
-  $("#theme-button").on("click", function () {
-    $("body").toggleClass("dark-theme");
-    const dark = $("body").hasClass("dark-theme");
-    $(this).text(dark ? "Switch to light theme" : "Switch to dark theme");
-    $(this).attr("aria-pressed", String(dark));
+  $("#welcome-form").on("submit", function (event) {
+    event.preventDefault();
+    if (showWelcome()) {
+      showFeedback("Welcome, Madridista", $("#welcome-message").text(), document.querySelector("#welcome-button"));
+    } else {
+      $("#fan-name").trigger("focus");
+    }
   });
+  $("#fan-name").on("input", showWelcome);
 
   // 2. Stop the previous animation before starting the next one.
   $(".faq-question").on("click", function () {

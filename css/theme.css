@@ -1,0 +1,39 @@
+/* Shared theme controls and colours for every page. */
+:root { color-scheme:light; }
+.top-actions { display:flex; align-items:center; gap:24px; }
+.site-theme-toggle { display:inline-flex; align-items:center; gap:7px; min-height:31px; padding:0 10px; border:0; border-left:1px solid #ffffff30; background:transparent; color:#e8ebf0; font-size:10px; letter-spacing:.3px; }
+.site-theme-toggle:hover,.site-theme-toggle[aria-pressed="true"] { color:#e0c78f; background:#ffffff0c; }
+.site-theme-toggle:focus-visible { outline-offset:-3px; }
+.dark-theme { color-scheme:dark; --ink:#eef0f5; --muted:#bbc2ce; --line:#344158; --paper:#1d2a40; --gold:#cfb575; }
+.dark-theme body { background:#090e18; }
+.dark-theme .site-shell { background:#142036; }
+.dark-theme .gold-text,.dark-theme .section-heading .eyebrow,.dark-theme .player-caption>span,.dark-theme .spotlight-list a>span:last-child { color:#cfb881; }
+.dark-theme .match-meta,.dark-theme .spotlight-copy>p:not(.eyebrow),.dark-theme .form-text { color:var(--muted); }
+.dark-theme .spotlight { background:var(--paper); }
+.dark-theme .spotlight-photo>span { color:#334158; }
+.dark-theme .player-facts div,.dark-theme .spotlight-list a { border-bottom-color:var(--line); }
+.dark-theme .spotlight-list a:hover { background:#26354d; }
+.dark-theme .player-portrait { background:linear-gradient(150deg,#26354b,#1a273c); }
+.dark-theme .shirt-number { color:#8190a7; }
+.dark-theme .form-panel { background:#142036; }
+.dark-theme .registration-layout .form-panel { background:var(--paper); }
+.dark-theme .dark-button,.dark-theme .task button:not(.faq-question):not(.remove-item):not(.theme-toggle) { background:#cfb575; color:#101a30; }
+.dark-theme .dark-button:hover,.dark-theme .task button:not(.faq-question):not(.remove-item):not(.theme-toggle):hover { background:#e0c991; }
+.dark-theme .form-control,.dark-theme .form-select,.dark-theme .task input,.dark-theme .task select { background:#101c30; color:var(--ink); border-color:#65718a; }
+.dark-theme .form-control::placeholder,.dark-theme .task input::placeholder { color:#a8b3c6; }
+.dark-theme .form-check-input { accent-color:#cfb575; }
+.dark-theme .form-actions .gold-button { color:var(--ink); border-color:#65718a; }
+.dark-theme .form-actions .gold-button:hover { background:#2b3b55; }
+.dark-theme .is-invalid,.dark-theme .task input.input-error { border-color:#ef8e8e; }
+.dark-theme .is-valid { border-color:#82c49a; }
+.dark-theme .is-invalid~.invalid-feedback,.dark-theme #list-message { color:#ffb1b1; }
+.dark-theme .is-valid~.valid-feedback { color:#a2dcb6; }
+.dark-theme .form-panel .form-status,.dark-theme #list-status { background:#244b39; color:#daefdf; border-color:#82c49a; }
+.dark-theme .task .remove-item { color:#ffb1b1; border-color:#786a72; }
+.dark-theme .task .remove-item:hover { background:#362c3c; }
+.dark-theme .faq-question::after { color:#cfb881; }
+.dark-theme .theme-panel #theme-button:hover { background:#2b3b55; }
+@media (max-width:600px) {
+  .top-actions>span { display:none; }
+  .site-theme-toggle { min-height:27px; font-size:9px; padding-right:0; }
+}

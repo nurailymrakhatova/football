@@ -2,19 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <script src="js/theme.js?v=20261113"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore Real Madrid: the players, the history, the Bernabéu and the people who make it special. A student fan website.">
     <meta name="theme-color" content="#101a30">
     <title>Fan Club | Real Madrid Fan Website</title>
     <link rel="icon" type="image/png" href="images/crest.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/forms.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/site.js" defer>
+    <link rel="stylesheet" href="css/style.css?v=20261113">
+    <link rel="stylesheet" href="css/forms.css?v=20261113">
+    <link rel="stylesheet" href="css/responsive.css?v=20261113">
+    <link rel="stylesheet" href="css/theme.css?v=20261113">
+    <link rel="stylesheet" href="css/feedback.css?v=20261113">
+    <script src="js/feedback.js?v=20261113" defer></script>
+    <script src="js/site.js?v=20261113" defer>
     </script>
     <script src="js/jquery-3.7.1.min.js" defer>
     </script>
-    <script src="js/forms.js" defer>
+    <script src="js/forms.js?v=20261113" defer>
     </script>
   </head>
   <body>
@@ -23,7 +27,12 @@
       <div class="top-line">
         <div class="container">
           <span>MADRID, ESPAÑA · EST. 1902</span>
-          <span>REAL MADRID FAN WEBSITE</span>
+          <div class="top-actions">
+            <span>REAL MADRID FAN WEBSITE</span>
+            <button class="site-theme-toggle theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false">
+              <span aria-hidden="true">◐</span><span class="theme-label">Dark theme</span>
+            </button>
+          </div>
         </div>
       </div>
       <header class="site-header">
@@ -172,8 +181,7 @@
                 <button class="button gold-button" type="reset">Reset</button>
               </div>
             </form>
-            <p class="form-status" id="registration-success" role="status" tabindex="-1">
-            </p>
+            <p class="form-status" id="registration-success" role="status" tabindex="-1"></p>
           </div>
           <p class="source-note">Have a stadium question? Open the <a href="stadium.html#visit-form">contact form</a>.</p>
         </section>
@@ -203,5 +211,13 @@
       </div>
     </footer>
   </div>
-</body>
+    <dialog id="feedback-dialog" class="feedback-dialog" aria-labelledby="feedback-title" aria-describedby="feedback-message">
+      <button class="dialog-close" type="button" data-close-dialog aria-label="Close message">×</button>
+      <span class="dialog-mark" aria-hidden="true">✓</span>
+      <p class="eyebrow gold-text">HALA MADRID</p>
+      <h2 id="feedback-title">All set</h2>
+      <p id="feedback-message"></p>
+      <button class="button dark-button" type="button" data-close-dialog autofocus>Got it</button>
+    </dialog>
+  </body>
 </html>

@@ -1,0 +1,17 @@
+/* One confirmation window for the enquiry, registration and welcome forms. */
+.feedback-dialog { width:calc(100% - 40px); max-width:440px; max-height:calc(100% - 40px); padding:36px; margin:auto; border:0; border-top:3px solid var(--gold); background:#fff; color:var(--ink); box-shadow:0 20px 80px #0005; overflow:auto; }
+.feedback-dialog::backdrop { background:#060d1cb8; }
+.feedback-dialog .dialog-close { position:absolute; top:10px; right:12px; width:34px; height:34px; padding:0; border:0; background:transparent; color:var(--muted); font-size:26px; line-height:1; }
+.feedback-dialog .dialog-close:hover { color:var(--ink); background:var(--paper); }
+.dialog-mark { display:grid; place-items:center; width:48px; height:48px; margin-bottom:22px; border:1px solid var(--gold); color:#8c6d32; font-size:25px; }
+.feedback-dialog .eyebrow { font-size:9px; }
+.feedback-dialog h2 { font-size:29px; letter-spacing:-.7px; padding-right:15px; }
+.feedback-dialog #feedback-message { color:var(--muted); font-size:14px; margin-top:17px; overflow-wrap:anywhere; }
+.feedback-dialog .button { margin-top:27px; min-width:110px; }
+html:has(.feedback-dialog[open]) { overflow:hidden; }
+.dark-theme .feedback-dialog { background:#1d2a40; }
+.dark-theme .dialog-mark { color:var(--gold); }
+@media (max-width:600px) {
+  .feedback-dialog { padding:28px 24px; }
+  .feedback-dialog h2 { font-size:26px; }
+}

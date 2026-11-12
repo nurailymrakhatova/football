@@ -12,7 +12,7 @@ $(document).ready(function () {
       const maximum = Number(field.attr("maxlength")) || Infinity;
       let valid = value.trim() !== "" && value.length >= minimum && value.length <= maximum;
       if (type === "email") {
-        valid = valid && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        valid = valid && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) && !field[0].validity.typeMismatch;
       }
       if (field.attr("id") === "confirm-password") {
         valid = valid && value === $("#password").val();
@@ -32,7 +32,10 @@ $(document).ready(function () {
         }
       });
       if (valid) {
-        success.text("Demo successful! No information was sent or stored. Your entries are kept until you choose Reset.").fadeIn(200).trigger("focus");
+        const title = form.attr("id") === "registration-form" ? "Registration checked" : "Message checked";
+        const message = "Demo successful! No information was sent or stored. Your entries stay in the form until you choose Reset or leave this page.";
+        success.text(message).fadeIn(200);
+        showFeedback(title, message, form.find("button[type=submit]")[0]);
       } else {
         form.find(".is-invalid").first().trigger("focus");
       }
@@ -49,6 +52,7 @@ $(document).ready(function () {
       form.removeClass("was-checked");
       fields.removeClass("is-invalid is-valid").removeAttr("aria-invalid");
       success.stop(true, true).hide().text("");
+      fields.first().trigger("focus");
     });
   });
 });
