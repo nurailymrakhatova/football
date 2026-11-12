@@ -21,3 +21,17 @@ textarea.form-control { resize:vertical; min-height:125px; }
 .form-actions .gold-button:hover { background:#e8e6df; }
 .form-status { margin-top:20px; padding:15px; border-left:3px solid #377147; background:#eaf3ec; color:#235232; font-size:12px; }
 .form-status:empty { display:none; }
+.form-error { grid-column:1/-1; color:#a12222; font-size:12px; line-height:1.5; }
+.form-error:empty { display:none; }
+.account-link { display:inline-block; margin-top:20px; font-size:13px; font-weight:700; text-decoration:underline; text-underline-offset:4px; }
+.profile-list { margin:25px 0; }
+.profile-list>div { display:grid; grid-template-columns:115px 1fr; gap:18px; padding:14px 0; border-bottom:1px solid var(--line); }
+.profile-list dt { color:var(--muted); font-size:12px; }
+.profile-list dd { margin:0; font-size:14px; overflow-wrap:anywhere; }
+.profile-actions { display:flex; gap:12px; flex-wrap:wrap; }
+.profile-name { overflow-wrap:anywhere; }
+[hidden] { display:none !important; }
+.dark-theme .form-error { color:#ffb1b1; }
+@media (max-width:600px) {
+  .profile-list>div { grid-template-columns:1fr; gap:3px; }
+}
