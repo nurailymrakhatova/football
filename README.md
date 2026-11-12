@@ -1,90 +1,89 @@
 # Real Madrid Fan Website
 
-Assignment 6: jQuery and completed website. Group: MT-2501.
+Final project · MT-2501 · 13 November 2026
 
-A student fan website about Real Madrid, its players, history and Santiago Bernabeu stadium. All seven pages share an editorial football design inspired by the supplied reference: full-width photography, navy and gold colours, square buttons, player portraits and fine grid dividers. The existing forms and all five jQuery tasks are preserved.
-
-## Team
-
-| Team member | Existing page responsibility | Repository evidence |
-|---|---|---|
-| Amantay Aiymzhan | Home, Fan Zone and shared integration | 2293e17, eb2e031, 815cb8e |
-| Aruzhan Meirkhan | Team page and squad | fdece75 |
-| Ayazhan Serikkazy | History, shared styles and form work | 6300b1e, b0e7753, 11c82a3 |
-| Nurailym Rakhatova | Stadium, gallery and visit information | 178df9e, 3ac407e |
-
-These references describe recorded work in the existing repository. The Assignment 6 update adds the jQuery integration and automated checks. Each member should review their page and explain the shared changes during defence; no unperformed individual review is claimed.
-
-## Open the project
-
-1. Extract the project ZIP.
-2. Open the football folder in VS Code.
-3. Open the folder with Live Server to share the saved theme between pages. You can also open index.html directly; theme storage for local file URLs depends on the browser.
-
-No installation or build is required. CSS, images, the club crest and jQuery are local files, so the project also works without an internet connection. Keep the HTML files, css, js and images folders together.
+A responsive student website for Real Madrid fans who want to explore the players, club history and stadium, filter football topics and create a practice fan profile. It uses HTML, plain CSS, JavaScript and local jQuery from Assignment 6. No build step or backend is needed.
 
 - Live website: https://nurailymrakhatova.github.io/football/
 - Repository: https://github.com/nurailymrakhatova/football
 
-## Files
+## Team and work division
 
-- index.html: home and navigation
-- team.html: player cards, squad and coach
-- history.html: club history and timeline
-- stadium.html: stadium, gallery, FAQ and enquiry demonstration
-- register.html: fan registration demonstration
-- interactive.html: Fan Zone and jQuery interactions
-- demo-result.html: explanation of frontend form limitations
-- css/style.css: common styles
-- css/responsive.css: shared media queries
-- css/interactive.css: Fan Zone styles
-- css/theme.css: shared light and dark themes and the switch on every page
-- css/feedback.css: confirmation window in both themes
-- css/forms.css: plain CSS form layout and validation feedback
-- js/site.js: keyboard-accessible mobile navigation
-- js/theme.js: saved theme, shared switches and synchronisation between open tabs
-- js/feedback.js: confirmation dialog, closing controls and focus restoration
-- js/interactive.js: welcome, FAQ, filtering and favourites
-- js/forms.js: jQuery validation for both forms
-- js/jquery-3.7.1.min.js: local jQuery library
-- images/: locally saved photos and crest.png, used as the favicon on every page
-- images/SOURCES.md: original links for the downloaded photographs
-
-## jQuery feature map
-
-| Task | Page and section | Main methods |
+| Team member | Existing responsibility | Repository examples |
 |---|---|---|
-| 1. Events and DOM updates | Fan Zone: Welcome, Madridista | .ready(), .on(), .val(), .text(), .addClass(), .removeClass(), .toggleClass() |
-| 2. Animation | Fan Zone: three FAQ items and favourites feedback | .stop(true, true), .slideDown(), .slideUp(), .fadeIn(), .delay(), .fadeOut(), .attr() |
-| 3. Combined filtering | Fan Zone: Explore football topics | .on('input'), .on('change'), .each(), .find(), .toggle(), .text() |
-| 4. Dynamic list | Fan Zone: My football favourites | .append(), .text(), delegated .on('click', '.remove-item', ...), .closest(), .remove() |
-| 5. Form validation | Stadium enquiry and Fan Club registration | .on('submit'), .val(), .toggleClass(), .attr(), .text(), .fadeIn() |
+| Amantay Aiymzhan | Home, Fan Zone and shared integration | 2293e17, eb2e031, 815cb8e |
+| Aruzhan Meirkhan | Team page and squad | fdece75 |
+| Ayazhan Serikkazy | History, shared styles and forms | 6300b1e, b0e7753, 11c82a3 |
+| Nurailym Rakhatova | Stadium, gallery and visit information | 178df9e, 3ac407e |
 
-jQuery loads before the external project scripts. Handlers are initialised after DOM ready. There are no inline event attributes, CSS frameworks, Bootstrap components, backend or build tools. jQuery is retained because Assignment 6 requires it. User input is inserted with .text(), never as raw HTML.
+These responsibilities come from the existing repository. Final integration, authentication, validation and browser checks are shared project work; no unperformed individual testing or rehearsal is claimed.
 
-## Complete user journey
+## Open locally
 
-Open Home, then Fan Zone. Search for visit and choose the Stadium category. Open Plan a visit, read the visitor FAQ, then complete the enquiry with Sample Fan, fan@example.com and Can I visit the stadium museum? Submit the form to see its demo confirmation.
+Extract the ZIP and open the football folder in VS Code. Start Live Server and open index.html. Use the same browser address and port throughout the demo so pages share storage. Direct file URLs can have separate storage depending on the browser. All photos, CSS, scripts, jQuery and the crest favicon are local files.
 
-The same navigation appears on all seven pages. Topic cards link to real pages or sections. The historical timeline anchor and a missing image description have been fixed. Duplicate responsive CSS rules are now kept only in css/responsive.css.
+## Pages
+
+| File | Purpose |
+|---|---|
+| index.html | Home, archive matches, player spotlight and section links |
+| team.html | Player cards, squad groups and coach |
+| history.html | Club story, timeline and trophies |
+| stadium.html | Gallery, visitor FAQ and validated demo enquiry |
+| register.html | Fan Club Sign Up and locally stored practice accounts |
+| login.html | Credential check and redirect to Profile |
+| profile.html | Saved details and Log out; guests go to Log In |
+| interactive.html | Welcome, theme, animated FAQ, combined search and favourites |
+| demo-result.html | Explanation of what the practice forms do and store |
+
+The same seven navigation links and theme switch appear on every page. Account opens Profile when logged in and Log In otherwise.
+
+## Final requirements
+
+| Requirement | Implementation |
+|---|---|
+| At least three pages | Nine connected HTML pages |
+| Responsive layout | Grid, Flexbox and media queries; checked at 375, 700, 768 and 1440 pixels |
+| Hosting | GitHub Pages, with separate live and repository links |
+| Light and dark modes | Shared theme applied before paint and saved in localStorage |
+| Sign Up simulation | Saves name, email, sample password, phone and selected profile details |
+| Log In and Profile | Checks saved credentials, displays details and supports logout |
+| Validation | Required fields, email, password complexity and matching, phone and message length; inline errors |
+| Search and filtering | Title search plus category, result count, empty state and Clear filters |
+| UI effects | Hover transitions, image zoom, animated FAQ and favourites feedback |
+| Accessibility | Labels, alt text, logical headings, keyboard controls, focus indicators and dialogs |
+| Organization | HTML pages plus css, js and images folders |
+| External API | Optional bonus; not included |
+
+Validation applies to fields relevant to each form. Login checks email and password; Sign Up also checks phone and password confirmation; Stadium checks name, email, phone and message. Welcome and favourites reject empty input.
+
+## Scripts
+
+- js/theme.js: saved preference, shared switches and synchronization across tabs and browser history.
+- js/site.js: mobile navigation and Escape.
+- js/account.js: users, credentials, session, profile and logout.
+- js/forms.js: jQuery validation, duplicate-email feedback, Sign Up and Log In.
+- js/feedback.js: native confirmation dialog, closing and keyboard focus.
+- js/interactive.js: welcome, FAQ, filters and delegated favourites removal.
+
+Styles are separated into shared layout, responsive rules, forms, Fan Zone, theme and dialog files. Image credits are in images/SOURCES.md. User values are displayed with textContent or jQuery .text(), never as HTML.
+
+## Sample demonstration
+
+1. Sign Up in Fan Club with Sample Fan, fan@example.com, +7 700 123 45 67, Kazakhstan and the disposable password Madrid2026! in both password fields.
+2. Close the confirmation, choose Log in and enter the same email and password.
+3. Profile shows saved details; reload to demonstrate persistence.
+4. Switch to dark mode, visit Team or History, then switch back to light.
+5. Log out; Account now opens Log In. Duplicate emails are rejected, so use the existing login or another sample email on later runs.
 
 ## Testing
 
-Updated on 13 November 2026: 22 checks passed across Chrome and Edge for the shared theme, all seven pages, persistence after navigation and reload, synchronisation between tabs, blocked storage, form validation, confirmation windows, keyboard focus, Escape, outside clicks, reset, mobile layout and existing Fan Zone interactions. No browser script or asset errors were found.
+On 13 November 2026, 32 checks passed across Chrome and Edge: guest redirects, required fields, password complexity and matching, invalid email and phone, registration, duplicate accounts, incorrect login, profile reload, logout, local links and anchors, shared navigation, image descriptions, headings, themes, responsive layouts, enquiry dialogs, filters, FAQ, favourites, blocked storage and malformed saved data. No browser script or local asset errors were found. All seven distinct external link destinations were opened separately.
 
-Tested on 3 November 2026 in Google Chrome 156.0.8078.80 and Microsoft Edge 156.0.4314.58. Seventeen functional and integration cases passed in each browser locally: 34 checks in total, including mobile menu keyboard controls and offline use. All seven pages were checked at 375, 768 and 1440 pixels. Cases cover empty names, theme state, FAQ mouse and keyboard controls, rapid clicks, combined filters, no results, reset filters, safe dynamic text, delegated deletion, empty favourites, invalid forms, valid forms, message length boundaries, registration passwords, navigation and assets.
+Screenshots used for browser checks are not added to this repository.
 
-The shared report contains the detailed steps, expected and actual results, screenshots and published-site verification. The report describes the earlier assignment checks.
+## Classroom simulation limits
 
-## Frontend limitations
+Only use sample details and a password you do not use elsewhere. To demonstrate the required localStorage logic, accounts include the sample password as plain local data. Anyone with access to this browser can inspect or change it. This is not secure authentication, an official membership or a server account. Profile never displays the password.
 
-This is a student fan website, not an official Real Madrid service. Forms validate entries only: no message, booking, payment or account is created. Valid form values remain until Reset or reload. Editing a value clears the previous success message. Favourites are kept only while the page is open. Only the light/dark preference is saved in localStorage, shared by all seven pages and other open tabs on the same website. No form entries or passwords are saved. If browser storage is blocked, the theme switch still works on the current page. Successful enquiry, registration and welcome forms open a dialog that closes with Got it, ×, Escape or a click outside. Invalid forms focus the first field that needs correction.
-
-## Resources
-
-- jQuery API: https://api.jquery.com/
-- jQuery Learning Center: https://learn.jquery.com/
-- jQuery 3.7.1: https://code.jquery.com/jquery-3.7.1.min.js
-- MDN: https://developer.mozilla.org/
-- Image credits: images/SOURCES.md
-- Club facts and photos: https://www.realmadrid.com/en-US
+madrid-users stores practice accounts, madrid-session identifies the logged-in account and madrid-theme stores appearance. Log out clears only the session; clearing this site's browser data removes accounts and preferences. Stadium sends and saves nothing. Favourites last until reload. Storage failures show an inline error rather than claiming success.
