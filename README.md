@@ -19,7 +19,7 @@ These references describe recorded work in the existing repository. The Assignme
 
 1. Extract the project ZIP.
 2. Open the football folder in VS Code.
-3. Open index.html in a browser, or use Live Server.
+3. Open the folder with Live Server to share the saved theme between pages. You can also open index.html directly; theme storage for local file URLs depends on the browser.
 
 No installation or build is required. CSS, images, the club crest and jQuery are local files, so the project also works without an internet connection. Keep the HTML files, css, js and images folders together.
 
@@ -37,10 +37,14 @@ No installation or build is required. CSS, images, the club crest and jQuery are
 - demo-result.html: explanation of frontend form limitations
 - css/style.css: common styles
 - css/responsive.css: shared media queries
-- css/interactive.css: Fan Zone styles and dark theme
+- css/interactive.css: Fan Zone styles
+- css/theme.css: shared light and dark themes and the switch on every page
+- css/feedback.css: confirmation window in both themes
 - css/forms.css: plain CSS form layout and validation feedback
 - js/site.js: keyboard-accessible mobile navigation
-- js/interactive.js: welcome, theme, FAQ, filtering and favourites
+- js/theme.js: saved theme, shared switches and synchronisation between open tabs
+- js/feedback.js: confirmation dialog, closing controls and focus restoration
+- js/interactive.js: welcome, FAQ, filtering and favourites
 - js/forms.js: jQuery validation for both forms
 - js/jquery-3.7.1.min.js: local jQuery library
 - images/: locally saved photos and crest.png, used as the favicon on every page
@@ -50,7 +54,7 @@ No installation or build is required. CSS, images, the club crest and jQuery are
 
 | Task | Page and section | Main methods |
 |---|---|---|
-| 1. Events and DOM updates | Fan Zone: Welcome, Madridista; appearance | .ready(), .on(), .val(), .text(), .addClass(), .removeClass(), .toggleClass() |
+| 1. Events and DOM updates | Fan Zone: Welcome, Madridista | .ready(), .on(), .val(), .text(), .addClass(), .removeClass(), .toggleClass() |
 | 2. Animation | Fan Zone: three FAQ items and favourites feedback | .stop(true, true), .slideDown(), .slideUp(), .fadeIn(), .delay(), .fadeOut(), .attr() |
 | 3. Combined filtering | Fan Zone: Explore football topics | .on('input'), .on('change'), .each(), .find(), .toggle(), .text() |
 | 4. Dynamic list | Fan Zone: My football favourites | .append(), .text(), delegated .on('click', '.remove-item', ...), .closest(), .remove() |
@@ -66,13 +70,15 @@ The same navigation appears on all seven pages. Topic cards link to real pages o
 
 ## Testing
 
+Updated on 13 November 2026: 22 checks passed across Chrome and Edge for the shared theme, all seven pages, persistence after navigation and reload, synchronisation between tabs, blocked storage, form validation, confirmation windows, keyboard focus, Escape, outside clicks, reset, mobile layout and existing Fan Zone interactions. No browser script or asset errors were found.
+
 Tested on 3 November 2026 in Google Chrome 156.0.8078.80 and Microsoft Edge 156.0.4314.58. Seventeen functional and integration cases passed in each browser locally: 34 checks in total, including mobile menu keyboard controls and offline use. All seven pages were checked at 375, 768 and 1440 pixels. Cases cover empty names, theme state, FAQ mouse and keyboard controls, rapid clicks, combined filters, no results, reset filters, safe dynamic text, delegated deletion, empty favourites, invalid forms, valid forms, message length boundaries, registration passwords, navigation and assets.
 
-The shared report contains the detailed steps, expected and actual results, screenshots and published-site verification. Retained Assignment 5 screenshots are historical evidence, not the Assignment 6 test results.
+The shared report contains the detailed steps, expected and actual results, screenshots and published-site verification. The report describes the earlier assignment checks.
 
 ## Frontend limitations
 
-This is a student fan website, not an official Real Madrid service. Forms validate entries only: no message, booking, payment or account is created. Valid form values remain until Reset or reload. Editing a value clears the previous success message. Favourites and the Fan Zone theme are kept only while the page is open; no database or local storage is used.
+This is a student fan website, not an official Real Madrid service. Forms validate entries only: no message, booking, payment or account is created. Valid form values remain until Reset or reload. Editing a value clears the previous success message. Favourites are kept only while the page is open. Only the light/dark preference is saved in localStorage, shared by all seven pages and other open tabs on the same website. No form entries or passwords are saved. If browser storage is blocked, the theme switch still works on the current page. Successful enquiry, registration and welcome forms open a dialog that closes with Got it, ×, Escape or a click outside. Invalid forms focus the first field that needs correction.
 
 ## Resources
 
