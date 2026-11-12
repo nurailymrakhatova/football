@@ -202,3 +202,12 @@
   html { scroll-behavior:auto; }
   *,*::before,*::after { transition:none !important; }
 }
+
+/* The extra Account link uses the mobile menu on smaller tablets too. */
+@media (min-width:601px) and (max-width:760px) {
+  .menu-toggle { display:flex; gap:14px; align-items:center; border:1px solid #ffffff60; color:#fff; background:#101a3060; padding:8px 11px; font-size:11px; }
+  .main-nav { display:none; position:absolute; top:102px; left:0; width:100%; background:#101a30; padding:15px 32px 25px; border-bottom:2px solid var(--gold); }
+  .main-nav.is-open { display:grid; grid-template-columns:1fr 1fr; gap:0 25px; }
+  .main-nav a { padding:15px 0; font-size:11px; border-bottom:1px solid #ffffff20; }
+  .main-nav a::after { bottom:8px; }
+}

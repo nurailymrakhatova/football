@@ -40,4 +40,7 @@
       applyTheme(readTheme());
     }
   });
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) applyTheme(readTheme());
+  });
 })();
